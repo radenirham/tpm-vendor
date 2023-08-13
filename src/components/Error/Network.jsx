@@ -1,99 +1,79 @@
+
 import React, { useEffect } from "react"
 import { Button, Row, Col } from "reactstrap"
 
 
-import logo from "../../assets/images/logo-full.png"
+import logo from "../../assets/images/logo.png"
+import bg from "../../assets/images/bg-left.png"
 
 import Lottie from 'react-lottie';
 import lottieDisconnect from '../../assets/lotties/disconected.json'
 
-import { authContext } from '../../services/adalConfig'
 
 const ErrorNetwork = () => {
 
-  const reloadAplikasi = () => {
-    authContext.logOut()
-    sessionStorage.clear()
-    localStorage.clear()
-  }
+    const reloadAplikasi = () => {
+        sessionStorage.clear()
+        localStorage.clear()
+        window.location.reload()
+    }
 
-
-  return (
-    <React.Fragment>
-      <div id="preloader">
-        <Row className="h-100">
-          <Col className="my-auto">
-            <div className="mx-auto" style={{ textAlign: 'center' }}>
-              <img src={logo} alt="" className="img-fluid mx-auto d-block" style={{ width: 220, paddingBottom: 30 }} />
-              <div style={{ margin: 50, height: 220 }}>
-                <Lottie
-                  options={{
-                    loop: true,
-                    autoplay: true,
-                    animationData: lottieDisconnect,
-                    rendererSettings: {
-                      preserveAspectRatio: 'xMidYMid slice'
-                    }
-                  }}
-                  height={220}
-                  width={220}
-                />
-              </div>
-              <h3 className="mt-5">Tidak terkoneksi dengan Service</h3>
-              <p>Silahkan hubungi pengelola aplikasi.</p>
-              <p>
-                <Button color="danger"
-                  onClick={() => {
-                    reloadAplikasi()
-                  }}
-                >
-                  Klik disini untuk memuat ulang Aplikasi
-                </Button>
-              </p>
-
-            </div>
-          </Col>
-        </Row>
-      </div>
-    </React.Fragment>
-  )
-
-  /* return (
-    <React.Fragment>
-      <div className="my-5 pt-sm-5">
-        <Container>
-          <Row>
-            <Col lg={12}>
-              <div className="text-center">
-                <Row className="justify-content-center mt-5">
-                  <Col lg={4} sm={5}>
-                    <div className="maintenance-img">
-                      <img src={logo} alt="" className="img-fluid mx-auto d-block" style={{width: 220, paddingBottom: 30}} />
-                      <Lottie
-                        options={{
-                          loop: true,
-                          autoplay: true, 
-                          animationData: lottieDisconnect,
-                          rendererSettings: {
-                            preserveAspectRatio: 'xMidYMid slice'
-                          }
+    return (
+        <React.Fragment>
+            <div id="preloader">
+                <Row className="h-100">
+                    <Col md={7}
+                        style={{
+                            backgroundColor: '#0098b0',
+                            backgroundImage: 'url('+bg+')',
+                            backgroundSize: 'auto 80%',
+                            backgroundPosition: 'bottom left',
+                            backgroundRepeat: 'no-repeat'
                         }}
-                        height={320}
-                        width={320}
-                      />
-                    </div>
-                  </Col>
+                        className="h-100 d-none d-md-block"
+                    >
+                    </Col>
+                    <Col md={5}>
+                        <Row className="h-100">
+                            <Col className="my-auto">
+                                <div className="mx-auto" style={{ textAlign: 'center' }}>
+                                    <img src={logo} alt="" className="img-fluid mx-auto d-block" style={{width: 220, height:92}} />
+                                    <div style={{ margin: 50, height: 220 }}>
+                                        <Lottie
+                                            options={{
+                                            loop: true,
+                                            autoplay: true,
+                                            animationData: lottieDisconnect,
+                                            rendererSettings: {
+                                                preserveAspectRatio: 'xMidYMid slice'
+                                            }
+                                            }}
+                                            height={220}
+                                            width={220}
+                                        />
+                                    </div>
+                                    <div style={{ minHeight: 126 }}>
+                                        <h5>Tidak terkoneksi dengan Service</h5>
+                                        <p>Silahkan hubungi pengelola aplikasi.</p>
+                                        <p>
+                                            <Button color="danger"
+                                                onClick={() => {
+                                                    reloadAplikasi()
+                                                }}
+                                            >
+                                                Muat Ulang
+                                            </Button>
+                                        </p>
+                                    </div>
+                                </div>
+                            </Col>
+                        </Row>
+                    </Col>
                 </Row>
+            </div>
+        </React.Fragment>
+    )
 
-                <h3 className="mt-5">Tidak terkoneksi dengan Service</h3>
-                <p>Silahkan hubungi pengelola aplikasi.</p>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </div>
-    </React.Fragment>
-  ) */
 }
 
 export default ErrorNetwork

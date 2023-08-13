@@ -4,7 +4,7 @@ import React from "react"
 import { Switch, BrowserRouter as Router } from "react-router-dom"
 import { connect } from "react-redux"
 
-
+import './services/languages'
 
 // Import all middleware
 import BaseMiddleware from "./routes/middleware/BaseMiddleware"
