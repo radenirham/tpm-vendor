@@ -23,6 +23,7 @@ import App from "./App"
 import Preload from './components/Preload'
 import ErrorNetwork from './components/Error/Network'
 import ErrorUser from './components/Error/User'
+import UploadProgress from './helpers/ui/services/UploadProgress'
 
 const canvas = document.getElementById("root")
 
@@ -109,6 +110,7 @@ function userArea() {
             <BrowserRouter>
                 <App routes={userRoutes} wrapper={UserLayout} />
             </BrowserRouter>
+            <UploadProgress />
         </Provider>
     )
     ReactDOM.render(page, canvas)
@@ -121,6 +123,7 @@ function publicArea() {
             <BrowserRouter>
                 <App routes={publicRoutes} wrapper={PublicLayout} />
             </BrowserRouter>
+            <UploadProgress />
         </Provider>
     )
     ReactDOM.render(page, canvas)

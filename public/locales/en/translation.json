@@ -1,3 +1,16 @@
 {
-    "Memeriksa koneksi...": "Connection Test..."
+    "Memeriksa koneksi...": "Connection Test...",
+    "agreement": "I am confident and responsible for this data",
+    "Copyright": "©{{year}} - Biofarma, All rights Reserved",
+    "datatable": {
+        "all": "All",
+        "show": "Show",
+        "entry": "entries",
+        "search": "Search...",
+        "showing": "Showing",
+        "to": "to",
+        "of": "of",
+        "previous": "Previous",
+        "next": "Next"
+    }
 }

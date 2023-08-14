@@ -1,3 +1,15 @@
 {
-    "Memeriksa koneksi...": "Memeriksa koneksi..."
+    "Memeriksa koneksi...": "Memeriksa koneksi...",
+    "Copyright": "©{{year}} - Biofarma, Hak Cipta dilindungi undang-undang",
+    "datatable": {
+        "all": "Semua",
+        "show": "Tampilkan",
+        "entry": "data",
+        "search": "Cari data...",
+        "showing": "Menampilkan",
+        "to": "sampai",
+        "of": "dari",
+        "previous": "Sebelumnya",
+        "next": "Berikutnya"
+    }
 }

@@ -33,10 +33,10 @@ const IndexView = (props) => {
             <Container className="mb-4 mt-4">
                 <Row>
                     <Col className="col-12">
-                        <Card>
+                        <Card className='ps-3 pe-3'>
                             <CardBody>
                                 <div className="float-end">
-                                    <Link to="/setting/users?create">
+                                    <Link to="sample.html?create">
                                         <Button color="warning"><BiMessageSquareAdd /> {t('buttonAdd')}</Button>
                                     </Link>
                                 </div>

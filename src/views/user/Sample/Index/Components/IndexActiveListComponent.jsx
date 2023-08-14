@@ -274,7 +274,7 @@ class SampleIndexActiveListComponent extends Component {
                         <ButtonAction
                             id={`detail-${  thisId}`}
                             color="success"
-                            link={`/setting/users?detail&uuid=${thisId}`}
+                            link={`sample.html?detail&uuid=${thisId}`}
                             tooltip=""
                             text={<FiAlignJustify size={14} />}
                         />
@@ -311,7 +311,7 @@ class SampleIndexActiveListComponent extends Component {
     render() {
         return (
             <>
-                <div className='invoice-list-dataTable react-dataTable'>
+                <div className='invoice-list-dataTable react-dataTable pt-4'>
                     <MKIDataGrid
                         lang={this.props.lang}
                         className={this.configDatatable.tableClass}

@@ -1,0 +1,20 @@
+{
+    "index": {
+        "title": "Sample",
+        "description": "This is the index view for the Sample page"
+    },
+    "buttonAdd": "Add new data",
+
+    "dataEmpty": "No Data yet",
+
+    "tampilkan": "Show",
+    "data": "data",
+    "Sebelumnya": "Previous",
+
+    "code": "Code",
+    "text": "Text",
+    "date": "Date",
+    "datetime": "Datetime",
+    "number": "Number",
+    "action": "Action"
+}

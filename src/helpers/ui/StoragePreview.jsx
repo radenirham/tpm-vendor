@@ -76,7 +76,7 @@ class StoragePreview extends Component {
                                 {
                                     this.state.link !== '' &&
                                     <>
-                                        <Button className='btn-icon' color='danger' type='button' style={{borderTopLeftRadius: 0, borderBottomLeftRadius: 0}} onClick={() => window.open(this.state.link, '_blank') }><FiDownload size={14} /></Button>
+                                        <Button color='danger' type='button' style={{borderTopLeftRadius: 0, borderBottomLeftRadius: 0}} onClick={() => window.open(this.state.link, '_blank') }><FiDownload size={14} /></Button>
                                     </>
                                 }
                             </>
@@ -95,7 +95,7 @@ class StoragePreview extends Component {
                             {
                                 this.state.link !== '' &&
                                 <>
-                                    <Button color='success' size='sm' className='btn-icon' onClick={() => {
+                                    <Button color='success' size='sm' onClick={() => {
                                         window.open(this.state.link, '_blank');
                                     }}>
                                         <FiDownload size={14} />

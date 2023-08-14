@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import logo from "../../../assets/images/logo.png"
 import { PiTranslateBold, PiCheckBold } from 'react-icons/pi'
 
+import { useTranslation } from 'react-i18next'
+
 import flagId from "../../../assets/images/flags/id.png"
 import flagEn from "../../../assets/images/flags/en.png"
 
@@ -26,6 +28,13 @@ const NavBar = () => {
      stickyMenuBar()
    },[])
 
+   const { i18n } = useTranslation(['menu'])
+   const [langActive, setLangActive] = useState(localStorage.getItem('i18nextLng'));
+   const handleLangUpdate = (e, lang) => {
+      e.preventDefault()
+      i18n.changeLanguage(lang)
+      setLangActive(lang)
+   }
 
    return (
       <>
@@ -52,15 +61,16 @@ const NavBar = () => {
                            </div>
                            <ul className="header-lang-list header-lang-list-3">
                               <li>
-                                 <a href="#">
+                                 <div onClick={e => handleLangUpdate(e, 'id')} style={{cursor: 'pointer'}}>
                                     <div className="float-start"><img src={flagId} style={{height: 12}} /> {' '} Bahasa</div>
-                                    <div className="float-end"><PiCheckBold /></div>
-                                 </a>
+                                    { langActive === 'id' && <div className="float-end"><PiCheckBold /></div> }
+                                 </div>
                               </li>
                               <li>
-                                 <a href="#">
+                                 <div onClick={e => handleLangUpdate(e, 'en')} style={{cursor: 'pointer'}}>
                                     <div className="float-start"><img src={flagEn} style={{height: 12}} /> {' '} English</div>
-                                 </a>
+                                    { langActive === 'en' && <div className="float-end"><PiCheckBold /></div> }
+                                 </div>
                               </li>
                            </ul>
                         </div>

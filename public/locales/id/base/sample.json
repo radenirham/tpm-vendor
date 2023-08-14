@@ -1,0 +1,20 @@
+{
+    "index": {
+        "title": "Contoh",
+        "description": "Ini tampilan index untuk halaman contoh"
+    },
+    "buttonAdd": "Tambah data baru",
+
+    "dataEmpty": "Belum memiliki data",
+
+    "tampilkan": "Tampilkan",
+    "data": "data",
+    "Sebelumnya": "Sebelumnya",
+
+    "code": "Kode",
+    "text": "Teks",
+    "date": "Tanggal",
+    "datetime": "Tanggal Waktu",
+    "number": "Nomor",
+    "action": "Aksi"
+}

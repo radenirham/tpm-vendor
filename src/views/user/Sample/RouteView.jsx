@@ -18,7 +18,7 @@ const RouteView = (props) => {
     const _print = queryParams.get('print')
 
     if (_create != null) {
-        <CreateView lang={t} />
+        return <CreateView lang={t} />
     } else if (_detail != null) {
         const uuid = queryParams.get('uuid')
         return (
