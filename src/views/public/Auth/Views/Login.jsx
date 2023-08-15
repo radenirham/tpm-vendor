@@ -62,7 +62,7 @@ class LoginView extends Component {
                     break
                 case apiResponse.ERROR:
                     this.setState({
-                        responseMessage: result.data.data.message,
+                        responseMessage: result.data.message,
                         statusLogin: apiResponse.ERROR
                     })
                     break

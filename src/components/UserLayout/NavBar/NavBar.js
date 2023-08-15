@@ -88,10 +88,12 @@ const NavBar = () => {
                            <div className="header__menu menu-dark">
                               <nav id="mobile-menu">
                                  <ul>
+                                    <li><Link to="/user.html">Dashboard</Link></li>
+                                    <li><Link to="/tpm.html">Third Party</Link></li>
                                     <li><Link to="/rfi.html">RFI</Link></li>
-                                    <li><Link to="/faq.html">Transaction Management</Link></li>
-                                    <li><Link to="/faq.html">Legal & Contract Management</Link></li>
-                                    <li><Link to="/contact.html">Calatogue & Order Management</Link></li>
+                                    <li><Link to="/sample.html">Transaction</Link></li>
+                                    <li><Link to="/sample.html">Legal & Contract</Link></li>
+                                    <li><Link to="/sample.html">Calatogue & Order</Link></li>
                                     {/* <li>
                                        <span dangerouslySetInnerHTML={{ __html: '<a href="javascript:void(0);">Procedure +</a>' }} />
                                        <ul className="submenu">
