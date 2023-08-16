@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import logo from "../../../assets/images/logo.png"
 import { PiTranslateBold, PiCheckBold } from 'react-icons/pi'
 
@@ -13,25 +13,25 @@ import { Button } from 'reactstrap'
 import { GiHamburgerMenu } from 'react-icons/gi'
 
 const NavBar = () => {
-   const [stickyMenu, setStickyMenu] = useState(false);
-   const [show, setShow] = useState(false);
-   const handleClose = () => setShow(false);
-   const handleShow = () => setShow(true);
+   const [stickyMenu, setStickyMenu] = useState(false)
+   const [show, setShow] = useState(false)
+   const handleClose = () => setShow(false)
+   const handleShow = () => setShow(true)
    useEffect(() => {
       const stickyMenuBar = () => {
-          if (window.scrollY > 100) {
-              setStickyMenu(true)
-          }
-          else {
-              setStickyMenu(false)
-          }
+         if (window.scrollY > 100) {
+            setStickyMenu(true)
+         }
+         else {
+            setStickyMenu(false)
+         }
       }
-     window.addEventListener('scroll', stickyMenuBar)
-     stickyMenuBar()
-   },[])
+      window.addEventListener('scroll', stickyMenuBar)
+      stickyMenuBar()
+   }, [])
 
    const { i18n } = useTranslation(['menu'])
-   const [langActive, setLangActive] = useState(localStorage.getItem('i18nextLng'));
+   const [langActive, setLangActive] = useState(localStorage.getItem('i18nextLng'))
    const handleLangUpdate = (e, lang) => {
       e.preventDefault()
       i18n.changeLanguage(lang)
@@ -44,10 +44,10 @@ const NavBar = () => {
             {/* <div className={stickyMenu ? "sticky_menu top-bar-white top-bar-3 lg-pt-30 lg-pb-30 h3_topBar" : "top-bar-white top-bar-3 pt-30 pb-30 h3_topBar"}> */}
             <div className="top-bar-white top-bar-3 pt-20 pb-20 h3_topBar">
                <div className="container">
-                  <div className={ "row align-items-center"}>
+                  <div className={"row align-items-center"}>
                      <div className="col-xl-4 col-lg-4 col-md-6 col-6">
                         <div className="logo logo-3 pos-rel">
-                           <Link to="/"><img src={logo} style={{height: 60, width: 145}} alt=""/></Link>
+                           <Link to="/"><img src={logo} style={{ height: 60, width: 145 }} alt="" /></Link>
                         </div>
                      </div>
                      <div className='col-6 d-lg-none'>
@@ -63,15 +63,15 @@ const NavBar = () => {
                            </div>
                            <ul className="header-lang-list header-lang-list-3">
                               <li>
-                                 <div onClick={e => handleLangUpdate(e, 'id')} style={{cursor: 'pointer'}}>
-                                    <div className="float-start"><img src={flagId} style={{height: 12}} /> {' '} Bahasa</div>
-                                    { langActive === 'id' && <div className="float-end"><PiCheckBold /></div> }
+                                 <div onClick={e => handleLangUpdate(e, 'id')} style={{ cursor: 'pointer' }}>
+                                    <div className="float-start"><img src={flagId} style={{ height: 12 }} /> {' '} Bahasa</div>
+                                    {langActive === 'id' && <div className="float-end"><PiCheckBold /></div>}
                                  </div>
                               </li>
                               <li>
-                                 <div onClick={e => handleLangUpdate(e, 'en')} style={{cursor: 'pointer'}}>
-                                    <div className="float-start"><img src={flagEn} style={{height: 12}} /> {' '} English</div>
-                                    { langActive === 'en' && <div className="float-end"><PiCheckBold /></div> }
+                                 <div onClick={e => handleLangUpdate(e, 'en')} style={{ cursor: 'pointer' }}>
+                                    <div className="float-start"><img src={flagEn} style={{ height: 12 }} /> {' '} English</div>
+                                    {langActive === 'en' && <div className="float-end"><PiCheckBold /></div>}
                                  </div>
                               </li>
                            </ul>
@@ -80,7 +80,7 @@ const NavBar = () => {
                   </div>
                </div>
             </div>
-            <div style={{height: 61}} className="header-menu-area">
+            <div style={{ height: 61 }} className="header-menu-area">
                <div className={stickyMenu ? "sticky_menu header-menu-area header-menu-blue theme-bg sticky_navBar_bg" : "header-menu-area header-menu-blue theme-bg h3_navBar"}>
                   <div className="container">
                      <div className="row align-items-center">
@@ -89,7 +89,7 @@ const NavBar = () => {
                               <nav id="mobile-menu">
                                  <ul>
                                     <li><Link to="/user.html">Dashboard</Link></li>
-                                    <li><Link to="/tpm.html">Third Party</Link></li>
+                                    <li><Link to="/tpm">Third Party</Link></li>
                                     <li><Link to="/rfi.html">RFI</Link></li>
                                     <li><Link to="/sample.html">Transaction</Link></li>
                                     <li><Link to="/sample.html">Legal & Contract</Link></li>
@@ -123,10 +123,10 @@ const NavBar = () => {
                                           onClick={() => {
                                              sessionStorage.clear()
                                              localStorage.clear()
-                                             window.location.href="/"
+                                             window.location.href = "/"
                                           }}
                                           color="primary"
-                                          style={{borderColor: '#ffffff', paddingLeft: '40px', paddingRight: '40px'}}
+                                          style={{ borderColor: '#ffffff', paddingLeft: '40px', paddingRight: '40px' }}
                                        >
                                           Sign Out
                                        </Button>
@@ -144,7 +144,7 @@ const NavBar = () => {
 
          {/* <Sidebar show={show} handleClose={handleClose} /> */}
       </>
-   );
-};
+   )
+}
 
-export default NavBar;
+export default NavBar
