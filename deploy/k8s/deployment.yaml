@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: fe-ui-public
+  name: fe-ui-public
+  namespace: ui-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: fe-ui-public
+  template:
+    metadata:
+      labels:
+        run: fe-ui-public
+    spec:
+      containers:
+      - image: us-central1-docker.pkg.dev/eproc-holding-dev/ui/uipublic:latest
+        name: fe-ui-public
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: 150m
+            ephemeral-storage: 250Mi
+            memory: 300Mi
