@@ -6,7 +6,7 @@ COPY ./deploy/env-dev .env
 # COPY ./deploy/vite.config.js-dev vite.config.js
 RUN git config --global url."https://".insteadOf git://
 RUN npm install --legacy-peer-deps
-RUN npm run build
+RUN NODE_OPTIONS=--max-old-space-size=4096 npm run build
 
 # production environment
 FROM nginx:stable-alpine
