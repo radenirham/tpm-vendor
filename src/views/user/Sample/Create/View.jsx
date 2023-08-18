@@ -267,7 +267,19 @@ class CreateView extends Component {
                                             >
                                                 <strong>{this.t('File')}</strong> <span className="text-danger">*</span>
                                             </Label>
-                                            <Col md="2">
+                                            <Col md="4">
+                                                <AvDropzone
+                                                    inline={true}
+                                                    name="sample_file"
+                                                    errorMessage="File harus dipilih"
+                                                    validate={{ required: { value: true } }}
+                                                    multiple={true}
+                                                    /* accept={{
+                                                        'image/*': ['.png', '.jpg', '.jpeg', '.gif']
+                                                    }} */
+                                                />
+                                            </Col>
+                                            <Col md="4">
                                                 <AvDropzone
                                                     inline={true}
                                                     name="sample_file"
