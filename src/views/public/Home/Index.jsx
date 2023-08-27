@@ -18,7 +18,6 @@ const HomeIndex =() => {
             {/* bikin slider */}
             <div>
                 <img src={bgHome} alt="" className="img-fluid mx-auto d-block" style={{width: "100%"}} />
-                
             </div>
             <Container className="mb-40">
                 <Row className="mt-40">
